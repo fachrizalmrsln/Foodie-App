@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Foodie</string>
     <string name="list_foods">List Foods</string>
+    <string name="item_name">Item Name</string>
+    <string name="how_to">How to :</string>
+    <string name="item_how_to">Item How To</string>
 </resources>
