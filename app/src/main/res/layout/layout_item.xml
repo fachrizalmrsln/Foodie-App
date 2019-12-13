@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_4"
+    android:layout_margin="@dimen/margin_8"
     android:elevation="@dimen/size_8"
     android:orientation="vertical"
-    app:cardCornerRadius="@dimen/size_8">
+    app:cardCornerRadius="@dimen/size_10">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_200">
 
         <ImageView
-            android:id="@+id/iv_item"
+            android:id="@+id/iv_item_foods"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -28,7 +28,7 @@
             android:background="#5B000000">
 
             <TextView
-                android:id="@+id/tv_item"
+                android:id="@+id/tv_item_foods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
