@@ -13,7 +13,7 @@ Simple aplication to show some food information from http://45.76.14.6:7000/food
     - Repository Pattern
     - Dependency Injection
     - Retrofit
-    - Shimmer
+    - Skeleton (shimmer animation)
 
 # Authors
 Fachrizal A. Z. Mursalin
