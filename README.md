@@ -6,7 +6,8 @@ Simple aplication to show some food information from http://45.76.14.6:7000/food
 
 # Features
 1. Showing data from API
-2. Tech Stack
+2. Showing detail data based on clicked item
+3. Tech Stack
     - Kotlin
     - Anko
     - Design Pattern (MVVM)
