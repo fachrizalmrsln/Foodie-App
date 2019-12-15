@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#5B000000">
+            android:background="@color/darkTransparent">
 
             <TextView
                 android:id="@+id/tv_item_foods"

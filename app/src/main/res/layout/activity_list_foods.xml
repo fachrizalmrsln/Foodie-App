@@ -9,7 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_50"
+        android:layout_height="@dimen/size_46"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginEnd="@dimen/margin_16"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="@string/list_foods"
-                android:textColor="@android:color/black"
+                android:textColor="@color/darkGray"
                 android:textSize="@dimen/text_size_18"
                 android:textStyle="bold" />
 
@@ -39,7 +39,9 @@
         android:id="@+id/rv_list_foods"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
         tools:listitem="@layout/layout_item" />
 
 </LinearLayout>

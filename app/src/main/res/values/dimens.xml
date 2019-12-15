@@ -17,4 +17,6 @@
     <dimen name="margin_20">20dp</dimen>
 
     <dimen name="padding_8">8dp</dimen>
+    <dimen name="size_46">46dp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
 </resources>

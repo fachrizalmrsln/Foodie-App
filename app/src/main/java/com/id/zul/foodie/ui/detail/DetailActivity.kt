@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.id.zul.foodie.R
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_detail.*
 import org.jetbrains.anko.find
 
 class DetailActivity : AppCompatActivity() {
 
+    private lateinit var toolbar: Toolbar
     private lateinit var ivItem: ImageView
     private lateinit var tvDesc: TextView
     private lateinit var tvName: TextView
@@ -23,16 +24,25 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        initializeToolbar()
         initializeViews()
         getData()
+    }
+
+    private fun initializeToolbar() {
+        toolbar = find(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        toolbar.title = "Detail Food"
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
     }
 
     private fun initializeViews() {
         ivItem = find(R.id.iv_item_detail)
         tvDesc = find(R.id.tv_item_how_to_detail)
         tvName = find(R.id.tv_item_name_detail)
-
-        iv_back_detail.setOnClickListener { finish() }
     }
 
     private fun getData() {
