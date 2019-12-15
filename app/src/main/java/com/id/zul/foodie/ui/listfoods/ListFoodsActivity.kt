@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ethanhua.skeleton.Skeleton
+import com.ethanhua.skeleton.SkeletonScreen
 import com.id.zul.foodie.R
 import com.id.zul.foodie.model.Foods
 import com.id.zul.foodie.ui.detail.DetailActivity
@@ -21,6 +23,7 @@ class ListFoodsActivity : AppCompatActivity() {
     private lateinit var viewModel: ListFoodsViewModel
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: FoodAdapter
+    private lateinit var shimmer: SkeletonScreen
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +35,21 @@ class ListFoodsActivity : AppCompatActivity() {
     private fun initializeViews() {
         viewModel = initializeViewModel()
         setRecyclerViews()
+        setShimmer()
     }
 
     private fun initializeViewModel(): ListFoodsViewModel {
         val factory = ViewModelFactory.getInstance()
         return ViewModelProviders.of(this, factory).get(ListFoodsViewModel::class.java)
+    }
+
+    private fun setShimmer() {
+        shimmer = Skeleton.bind(recyclerView)
+            .adapter(adapter)
+            .load(R.layout.layout_item_shimmer)
+            .color(R.color.shimmerColor)
+            .angle(0)
+            .show()
     }
 
     private fun getData() {
@@ -47,6 +60,7 @@ class ListFoodsActivity : AppCompatActivity() {
                     toast("Fail getting data from server")
                 else {
                     setData(it)
+                    shimmer.hide()
                 }
             }
         )
