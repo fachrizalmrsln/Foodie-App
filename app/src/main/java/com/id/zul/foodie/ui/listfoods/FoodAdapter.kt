@@ -33,7 +33,7 @@ class FoodAdapter(private val context: Context, private val listener: (Foods) ->
                 Picasso
                     .get()
                     .load(data.image)
-                    .placeholder(R.drawable.place_holder)
+                    .placeholder(R.drawable.icon)
                     .into(ivItem)
             }
             itemView.setOnClickListener { listener(data) }
