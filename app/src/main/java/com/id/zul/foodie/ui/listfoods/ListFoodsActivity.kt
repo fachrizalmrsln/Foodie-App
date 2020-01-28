@@ -24,6 +24,7 @@ class ListFoodsActivity : AppCompatActivity() {
     private lateinit var shimmer: SkeletonScreen
 
     private val viewModel by viewModel<ListFoodsViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_foods)

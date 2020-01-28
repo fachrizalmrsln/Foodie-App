@@ -34,4 +34,5 @@ class RemoteRepository {
         })
         return foodData
     }
+
 }

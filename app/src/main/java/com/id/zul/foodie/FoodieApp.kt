@@ -17,4 +17,5 @@ class FoodieApp : Application() {
             modules(viewModelModule)
         }
     }
+
 }

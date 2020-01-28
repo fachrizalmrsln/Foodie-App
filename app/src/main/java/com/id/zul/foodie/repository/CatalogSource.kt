@@ -6,4 +6,5 @@ import com.id.zul.foodie.model.Foods
 interface CatalogSource {
 
     fun getData(): LiveData<List<Foods>>
+
 }

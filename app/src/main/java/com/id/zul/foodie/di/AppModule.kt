@@ -13,4 +13,5 @@ object AppModule {
         single { CatalogRepository(get()) }
         viewModel { ListFoodsViewModel(get()) }
     }
+
 }

@@ -10,4 +10,5 @@ class CatalogRepository(
     override fun getData(): LiveData<List<Foods>> {
         return remoteRepository.getData()
     }
+
 }
