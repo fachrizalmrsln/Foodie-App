@@ -8,5 +8,4 @@ interface ApiService {
 
     @GET("foods")
     fun getData(): Call<List<Foods>>
-
 }
