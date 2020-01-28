@@ -4,7 +4,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,17 +12,18 @@ import com.ethanhua.skeleton.SkeletonScreen
 import com.id.zul.foodie.R
 import com.id.zul.foodie.model.Foods
 import com.id.zul.foodie.ui.detail.DetailActivity
-import com.id.zul.foodie.viewmodel.ViewModelFactory
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class ListFoodsActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: ListFoodsViewModel
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: FoodAdapter
     private lateinit var shimmer: SkeletonScreen
+
+    private val viewModel by viewModel<ListFoodsViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,14 +33,8 @@ class ListFoodsActivity : AppCompatActivity() {
     }
 
     private fun initializeViews() {
-        viewModel = initializeViewModel()
         setRecyclerViews()
         setShimmer()
-    }
-
-    private fun initializeViewModel(): ListFoodsViewModel {
-        val factory = ViewModelFactory.getInstance()
-        return ViewModelProviders.of(this, factory).get(ListFoodsViewModel::class.java)
     }
 
     private fun setShimmer() {

@@ -12,12 +12,6 @@ import retrofit2.Response
 
 class RemoteRepository {
 
-    companion object {
-        fun getInstance(): RemoteRepository {
-            return RemoteRepository()
-        }
-    }
-
     fun getData(): LiveData<List<Foods>> {
         val foodData: MutableLiveData<List<Foods>> = MutableLiveData()
 
@@ -38,7 +32,6 @@ class RemoteRepository {
             }
 
         })
-
         return foodData
     }
 
